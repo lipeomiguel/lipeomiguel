@@ -15,8 +15,3 @@
   <img height="250" width="560"  src="https://github-readme-stats.vercel.app/api?username=lipeomiguel&show_icons=true&theme=dracula" target="_blank">
  <img height="250" width="250"  src="https://github-readme-stats.vercel.app/api/top-langs/?username=lipeomiguel&theme=dracula" target="_blank">
 </div>
-
-<div> 
-  <a href = "mailto:feliphe.dev@tuta.io"><img src="https://img.shields.io/badge/Tutanota-840010?style=for-the-badge&logo=Tutanota&logoColor=white" target="_blank"></a>
-  <a href="https://discord.gg/yEGEzvBZUD" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a>
-</div>
