@@ -1,0 +1,315 @@
+@import "./color.scss"; /* ! Desktops and laptops */
+@import "./fonts.scss"; /* ! Fonts and styles */
+@import "./frames.scss"; /* ! Frames and styles */
+@media only screen and (min-width: 1224px) {
+  body {
+    background-color: firebrick;
+  }
+}
+
+/* TODO: DAQUI PRA BAIXO É CODIGO MOBILE CSS */
+
+/* ! Smartphones (landscape) */
+@media only screen and (max-width: 768px) {
+  body {
+        width: 100dvw;
+        height: 100dvh;
+        background: linear-gradient($headerBackground,$headerSecundBackground);
+        color: $colortext;
+        font-family: "JetBrainsMono-Regular",monospace;
+        overflow-x: hidden;
+        header {
+        width: 100%;
+        height: 3.3rem;
+        background-color: $gunmetal;
+        border-bottom: 1px solid $gunmetalSecund;
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            .logotipo{
+                @include header_nav();
+                .mylogo{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-style: normal;
+                    color: $gold;
+                }
+            }
+            .menu-mobile{
+                @include header_nav();
+                .material-symbols-outlined{
+                    font-size: 1.5rem;
+                    color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .about-me{
+            width: 100%;
+            background-color: $gunmetal;
+            border-bottom: 0.1rem solid $gunmetalSecund;
+            .container-about{
+                width: 100%;
+                height: 100%;
+                .about-saury-left{
+                    .about-saury{
+                        width: 70%;
+                        margin-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        .about-suary-title{
+                            margin-top: 10%;
+                            margin-left: 10%;
+                            font-size: 3rem;
+                            font-weight: 500;
+                            font-style: normal;
+                            font-family: "JetBrainsMono-Regular";
+                            color: #92DCE5;
+                            margin-bottom: 10px;
+                            .about-suay-white{
+                                color: $white;
+                            }
+                        }
+                        .about-suary-p{
+                            margin-left: 10%;
+                            font-size: 0.6rem;
+                            font-weight: 300;
+                            font-style: normal;
+                            font-family: "JetBrainsMono-Regular", monospace;
+                            color: $gold;
+                        }
+                    }
+                    .about-saury-sub{
+                        width: 100%;
+                        height: 5.5rem;
+                        margin-top: 4%;
+                        margin-left: 5%;
+                        display: flex;
+                        .about-saury-sub-p{
+                            width: 10rem;
+                            font-size: 0.6rem;
+                            
+                            font-weight: 300;
+                            font-style: italic;
+                            font-family: "JetBrainsMono-Regular", monospace;
+                            color: $blue;
+                        }
+                    }
+                }
+            }    
+        }
+    .about-photo{
+        width: 100%;
+        height: 25rem;
+        background: linear-gradient($headerBackground,$headerSecundBackground);
+        border-bottom: 1px solid $headerLine;
+        color: #000;
+        .about-photo-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .about-figures{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                img{
+                    position: absolute;
+                    border: 0.14rem solid $headerSecundBackground;
+                    border-radius: 0.2rem;
+                    box-shadow:  0px 0px 20px 5px $headerFourBackground;
+                    left: 3.5rem;
+                    width: 70%;
+                    height: 70%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .about-full{
+        width: 100%;
+        height: 76dvh;
+        background-color: $gunmetal;
+        border-bottom: 0.1rem solid $headerLine;
+        padding-top: 1.5rem;
+        .about-full-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .about-full-left{
+                width: 90%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                div{
+                    background-color: $gunmetalSecund;
+                    padding: 1.3rem;
+                    border: 1px solid transparent;
+                    border-radius: 0.2rem;
+                }
+            }
+            .about-full-rigth{
+                width: 90%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 1.3rem;
+                div{
+                    background-color: $gunmetalSecund;
+                    padding: 1.3rem;
+                    border: 1px solid transparent;
+                    border-radius: 0.2rem;
+                }
+            }
+            .about-full-title{
+                font-size: 1.7rem;
+                font-style: oblique;
+                font-family: "JetBrainsMono-Regular", monospace;
+                font-weight: 400;
+                margin-bottom: 0.9rem;
+                color: $gold;
+            }
+            .about-full-paragr{
+                font-size: 0.8rem;
+                font-family: "JetBrainsMono-Regular", monospace;
+                font-weight: 400;
+                padding-top: 0.2rem;
+                padding-bottom: 0.7rem;
+                color: $whitSecund;
+            }
+        }
+    }
+    .about-skills{
+        width: 100%;
+        margin-top: 20px;
+        background: linear-gradient($headerBackground,$headerSecundBackground);
+        border-bottom: 0.1rem solid $headerFourBackground;
+        .about-skills-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-right: 0.1rem;
+            margin-left: 0.1rem;
+            .about-skills-left{
+                width: 95%;
+                height: 90%;
+                background-color: $headersBackground;
+                border: 1px solid transparent;
+                border-radius: 0.4rem;
+                padding: 5%;
+                div{
+                    .about-skills-title{
+                        font-size: 2.3rem;
+                        font-family: "JetBrainsMono-Regular", monospace;
+                        font-weight: 400;
+                        margin-bottom: 10px;
+                        color: $gold;
+                    }
+                    .about-skills-paragr{
+                        font-size: 0.5rem;
+                        font-family: "JetBrainsMono-Regular", monospace;
+                        font-weight: 400;
+                        margin-bottom: 10px;
+                        color: $white; 
+                    }
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 1.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        div{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 0.3rem;
+                            small{
+                                width: 15%;
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                            }
+                            label{
+                                width: 6rem;
+                                font-size: 0.7rem;
+                                font-family: "JetBrainsMono-Regular", monospace;
+                                text-align: center;
+                                color: $white;
+                                margin-right: 7px;
+                            }
+                            .process{
+                                width: 100%;
+                                height: 15px;
+                                background-color: $gunmetalSecund;
+                            }
+                            .process-frontend{
+                                width: 85.3%;
+                                height: 15px;
+                                background-color: $GreenBackground;
+                            }
+                            .process-backend{
+                                width: 77.3%;
+                                height: 15px;
+                                background-color: $GreenBackground;
+                            }
+                            .process-php{
+                                width: 85.7%;
+                                height: 15px;
+                                background-color: $GreenBackground;
+                            }
+                            .process-python{
+                                width: 90%;
+                                height: 15px;
+                                background-color: $GreenBackground;
+                            }
+                            .process-mysql{
+                                width: 67.5%;
+                                height: 15px;
+                                background-color: $GreenBackground;
+                            }
+                            .process-design{
+                                width: 79.5%;
+                                height: 15px;
+                                background-color: $GreenBackground;
+                            }
+                            small{
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    .about-contact{
+        width: 100%;
+        height: 80vh;
+        background-color: $gunmetal;
+    }
+}  
+}
