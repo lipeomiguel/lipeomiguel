@@ -1,338 +1,263 @@
-@charset "UTF-8";
-/*END HEADER*/
-/* ! Desktops and laptops */
-@font-face {
-  /*
-      ! Download esse JetBrains Mono fonts : https://www.jetbrains.com/lp/mono/
-      ! Para mais fonts acessar: https://fonts.google.com/
-      ! truetype => é tipo de formato de fontes [ ./font/JetBrainsMono.ttf ]
-      ! woff => é tipo de formato de fontes [ ./font/JetBrainsMono-Bold.woff ]
-      ! svg => é tipo de formato de fontes [ ./font/JetBrainsMono-Bold.svg ]
-      ! embedded-opentype => é tipo de formato de fontes [ ./font/JetBrainsMono.eot ]
-      ? É obrigatorio informa o font-weight e font-style.
-      ? É obrigatorio informa o nome da font: [ font-family: 'Qualquer nome'; ]
-      ? Exemplo font-weight [ font-weight: normal; ]
-      ? Exemplo font-style [ font-style: normal; ]
-  */
-  font-family: "JetBrainsMono-Regular";
-  src: url("../fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype"), url("../fonts/webfonts/JetBrainsMono-Regular.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.header-logo-title {
+  font-size: clamp(0.1rem, 10vw, 1.6rem);
 }
-/* ! Fonts and styles */
-/* ! Frames and styles */
-@media only screen and (min-width: 1224px) {
-  body {
-    background-color: firebrick;
-  }
+
+header {
+  width: 100%;
+  height: calc(1rem + 3vw + 2rem);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-/* TODO: DAQUI PRA BAIXO É CODIGO MOBILE CSS */
-/* ! Smartphones (landscape) */
-@media only screen and (max-width: 768px) {
-  body {
-    width: 100dvw;
-    height: 100dvh;
-    background: linear-gradient(#a6c2bd, #68b2a7);
-    color: #212D40;
-    font-family: "JetBrainsMono-Regular", monospace;
-    overflow-x: hidden;
-  }
-  body header {
-    width: 100%;
-    height: 3.3rem;
-    background-color: #252a34;
-    border-bottom: 1px solid #3f444b;
-  }
-  body header .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  body header .container .logotipo {
-    width: 6.4rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  body header .container .logotipo .mylogo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-style: normal;
-    color: #CCA43B;
-  }
-  body header .container .menu-mobile {
-    width: 6.4rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  body header .container .menu-mobile .material-symbols-outlined {
-    font-size: 1.5rem;
-    color: #92DCE5;
-  }
-  .main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .main .about-me {
-    width: 100%;
-    background-color: #252a34;
-    border-bottom: 0.1rem solid #3f444b;
-  }
-  .main .about-me .container-about {
-    width: 100%;
-    height: 100%;
-  }
-  .main .about-me .container-about .about-saury-left .about-saury {
-    width: 70%;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .main .about-me .container-about .about-saury-left .about-saury .about-suary-title {
-    margin-top: 10%;
-    margin-left: 10%;
-    font-size: 3rem;
-    font-weight: 500;
-    font-style: normal;
-    font-family: "JetBrainsMono-Regular";
-    color: #92DCE5;
-    margin-bottom: 10px;
-  }
-  .main .about-me .container-about .about-saury-left .about-saury .about-suary-title .about-suay-white {
-    color: #ffffff;
-  }
-  .main .about-me .container-about .about-saury-left .about-saury .about-suary-p {
-    margin-left: 10%;
-    font-size: 0.6rem;
-    font-weight: 300;
-    font-style: normal;
-    font-family: "JetBrainsMono-Regular", monospace;
-    color: #CCA43B;
-  }
-  .main .about-me .container-about .about-saury-left .about-saury-sub {
-    width: 100%;
-    height: 5.5rem;
-    margin-top: 4%;
-    margin-left: 5%;
-    display: flex;
-  }
-  .main .about-me .container-about .about-saury-left .about-saury-sub .about-saury-sub-p {
-    width: 10rem;
-    font-size: 0.6rem;
-    font-weight: 300;
-    font-style: italic;
-    font-family: "JetBrainsMono-Regular", monospace;
-    color: #92DCE5;
-  }
-  .main .about-photo {
-    width: 100%;
-    height: 25rem;
-    background: linear-gradient(#a6c2bd, #68b2a7);
-    border-bottom: 1px solid #87a9a4;
-    color: #000;
-  }
-  .main .about-photo .about-photo-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .main .about-photo .about-photo-container .about-figures {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .main .about-photo .about-photo-container .about-figures img {
-    position: absolute;
-    border: 0.14rem solid #68b2a7;
-    border-radius: 0.2rem;
-    box-shadow: 0px 0px 20px 5px #9c9d9d;
-    left: 3.5rem;
-    width: 70%;
-    height: 70%;
-    object-fit: cover;
-  }
-  .main .about-full {
-    width: 100%;
-    height: 76dvh;
-    background-color: #252a34;
-    border-bottom: 0.1rem solid #87a9a4;
-    padding-top: 1.5rem;
-  }
-  .main .about-full .about-full-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .main .about-full .about-full-container .about-full-left {
-    width: 90%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .main .about-full .about-full-container .about-full-left div {
-    background-color: #3f444b;
-    padding: 1.3rem;
-    border: 1px solid transparent;
-    border-radius: 0.2rem;
-  }
-  .main .about-full .about-full-container .about-full-rigth {
-    width: 90%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 1.3rem;
-  }
-  .main .about-full .about-full-container .about-full-rigth div {
-    background-color: #3f444b;
-    padding: 1.3rem;
-    border: 1px solid transparent;
-    border-radius: 0.2rem;
-  }
-  .main .about-full .about-full-container .about-full-title {
-    font-size: 1.7rem;
-    font-style: oblique;
-    font-family: "JetBrainsMono-Regular", monospace;
-    font-weight: 400;
-    margin-bottom: 0.9rem;
-    color: #CCA43B;
-  }
-  .main .about-full .about-full-container .about-full-paragr {
-    font-size: 0.8rem;
-    font-family: "JetBrainsMono-Regular", monospace;
-    font-weight: 400;
-    padding-top: 0.2rem;
-    padding-bottom: 0.7rem;
-    color: #d4d3d3;
-  }
-  .main .about-skills {
-    width: 100%;
-    margin-top: 20px;
-    background: linear-gradient(#a6c2bd, #68b2a7);
-    border-bottom: 0.1rem solid #9c9d9d;
-  }
-  .main .about-skills .about-skills-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-right: 0.1rem;
-    margin-left: 0.1rem;
-  }
-  .main .about-skills .about-skills-container .about-skills-left {
-    width: 95%;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0.8196078431);
-    border: 1px solid transparent;
-    border-radius: 0.4rem;
-    padding: 5%;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div .about-skills-title {
-    font-size: 2.3rem;
-    font-family: "JetBrainsMono-Regular", monospace;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: #CCA43B;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div .about-skills-paragr {
-    font-size: 0.5rem;
-    font-family: "JetBrainsMono-Regular", monospace;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-right: 0.3rem;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div small {
-    width: 15%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div label {
-    width: 6rem;
-    font-size: 0.7rem;
-    font-family: "JetBrainsMono-Regular", monospace;
-    text-align: center;
-    color: #ffffff;
-    margin-right: 7px;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process {
-    width: 100%;
-    height: 15px;
-    background-color: #3f444b;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process-frontend {
-    width: 85.3%;
-    height: 15px;
-    background-color: #BAFF29;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process-backend {
-    width: 77.3%;
-    height: 15px;
-    background-color: #BAFF29;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process-php {
-    width: 85.7%;
-    height: 15px;
-    background-color: #BAFF29;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process-python {
-    width: 90%;
-    height: 15px;
-    background-color: #BAFF29;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process-mysql {
-    width: 67.5%;
-    height: 15px;
-    background-color: #BAFF29;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div .process-design {
-    width: 79.5%;
-    height: 15px;
-    background-color: #BAFF29;
-  }
-  .main .about-skills .about-skills-container .about-skills-left div ul div small {
-    color: #ffffff;
-  }
-  .main .about-contact {
-    width: 100%;
-    height: 80vh;
-    background-color: #252a34;
-  }
+header .header-logo {
+  width: calc(1rem + 25vw + 3.2rem);
+}
+header .header-logo .header-logo-title {
+  margin-left: 4.2rem;
+  font-size: clamp(0.1rem, 4.2vw, 1.6rem);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+header .header-menu-desktop {
+  width: calc(10px + 50vw + 100px);
+}
+header .header-menu-desktop ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+header .header-menu-desktop ul li {
+  width: calc(-10px + 10vw + 6rem);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.1rem, 4.2vw, 1.6rem);
+}
+header .header-menu-desktop ul li:last-child {
+  display: none;
+  font-size: clamp(0.1rem, 5.2vw, 1.6rem);
+}
+header .header-menu-desktop ul li:last-child span:first-child {
+  display: flex;
+  cursor: pointer;
+}
+header .header-menu-desktop ul li:last-child span:last-child {
+  display: none;
+  cursor: pointer;
+}
+header .header-menu-desktop ul li a {
+  text-decoration: none;
+  color: #555555;
+}
+header .header-menu-desktop ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #000;
+  text-underline-offset: 1.2rem;
+}
+
+.header-menu-mobile {
+  display: none;
+  width: 100%;
+}
+.header-menu-mobile ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid #efefef;
+}
+.header-menu-mobile ul li {
+  height: calc(2.5rem + 4vw + 3.2rem);
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.header-menu-mobile ul li a {
+  font-size: clamp(0.1rem, 4.2vw, 1.6rem);
+  text-decoration: none;
+  color: #555555;
+}
+.header-menu-mobile ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #000;
+  text-underline-offset: 1.2rem;
+}
+
+.main-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .main-container-view {
+  width: 90%;
+}
+.main-container .main-container-view .main-container-view-home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-photo {
+  background-color: transparent;
+  width: calc(8.7rem + 3.4vw + 12rem);
+  margin-right: calc(1.4rem + 3.4vw);
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-photo img {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  border: #000;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content {
+  width: calc(8.7rem + 3.4vw + 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content h1 {
+  font-size: clamp(0.1rem, 2.2vw, 1.2rem);
+  margin-bottom: calc(0.1rem + 0.5vw);
+  color: #555555;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content span {
+  font-size: clamp(0.1rem, 2.6vw, 4.2rem);
+  margin-bottom: calc(0.1rem + 0.6vw);
+  color: #000;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content p {
+  font-size: clamp(0.1rem, 2.2vw, 1.4rem);
+  color: #555555;
+  margin-bottom: calc(0.1rem + 1vw);
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div {
+  display: flex;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div button {
+  padding: calc(0.7rem + 0.5vw) calc(0.7rem + 1vw);
+  margin: 0 calc(0.4rem + 0.1vw);
+  border: 0.15rem solid transparent;
+  font-size: clamp(0.4rem, 2.2vw, 0.9rem);
+  font-weight: 500;
+  border-radius: 10rem;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div button:first-child {
+  background-color: transparent;
+  border-color: #000;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div button:first-child:hover {
+  border-color: transparent;
+  background-color: #000;
+  color: #fff;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div button:last-child {
+  background-color: #000;
+  color: #fff;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div button:last-child:hover {
+  border-color: #000;
+  background-color: #fff;
+  color: #000;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i {
+  font-size: clamp(0.1rem, 2.2vw, 1.4rem);
+  margin-right: calc(0.5vh + 0.7rem);
+  margin-top: calc(0.5vh + 0.7rem);
+  cursor: pointer;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i:first-child:hover {
+  opacity: 0.5;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i:nth-child(2):hover, .main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i:nth-child(3):hover {
+  color: #0091ff;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i:nth-child(4):hover {
+  color: #E5609E;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i:nth-child(5):hover {
+  color: #6066EE;
+}
+.main-container .main-container-view .main-container-view-home .main-container-view-home-content div:last-child i:last-child:hover {
+  color: #ffbf00;
+}
+.main-container .main-container-view .main-container-view-about:hover .main-container-view-about-filter {
+  filter: grayscale(0%) !important;
+  transition: 700ms ease-in-out 0.2s;
+}
+.main-container .main-container-view .main-container-view-about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-left {
+  width: 50%;
+  display: inherit;
+  justify-content: center;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-left .main-container-view-about-left-photo {
+  width: calc(8.7rem + 5.4vw + 8.4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-left .main-container-view-about-left-photo img {
+  border: 1px solid transparent;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  border: #000;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right {
+  width: 50%;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container {
+  display: inline-block;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container h2 {
+  font-size: clamp(0.1rem, 2.2vw, 1.9rem);
+  margin-bottom: calc(0.1rem + 0.5vw);
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container p {
+  font-size: clamp(0.1rem, 1.2vw, 0.9rem);
+  margin-bottom: calc(0.1rem + 0.4vw);
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container button {
+  padding: calc(0.2rem + 0.6vw);
+  background-color: #0091ff;
+  border: 2px solid transparent;
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: clamp(0.1rem, 1.2vw, 0.9rem);
+  margin-bottom: calc(0.1rem + 0.7vw);
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container button:hover {
+  background-color: transparent;
+  border-color: #0091ff;
+  color: #0091ff;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container h3 {
+  font-size: clamp(0.1rem, 2.2vw, 1.5rem);
+  margin-bottom: calc(0.1rem + 0.2vw);
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container div img {
+  width: calc(1.3rem + 1.3vw);
+  margin: calc(0.1rem + 0.1vw);
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+.main-container .main-container-view .main-container-view-about .main-container-view-about-right .main-container-view-about-right-container div img:first-child {
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
